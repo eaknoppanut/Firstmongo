@@ -41,9 +41,9 @@ module.exports = function () {
     app.set('views', path.join(__dirname + '/../app/views/home.html'));
     app.engine('html', require('ejs').renderFile);
     app.set('view engine', 'ejs');
-    
+
     require('../app/routes/index.route')(app);
     require('../app/routes/user.route')(app);
-
+    require('../app/routes/post.route')(app);
     return app;
 }
